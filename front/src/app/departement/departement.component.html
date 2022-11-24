@@ -1,0 +1,35 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+	<a class="navbar-brand" href="#">eXplain</a>
+	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+	  <span class="navbar-toggler-icon"></span>
+	</button>
+
+	<div class="collapse navbar-collapse" id="navbarSupportedContent">
+	  <ul class="navbar-nav mr-auto">
+		<li class="nav-item active">
+		  <a class="nav-link" href="#">Home <span class="sr-only"></span></a>
+		</li>
+	  </ul>
+	</div>
+  </nav>
+<div id="sidebar" class="py-3">
+	<div class="text-gray-400 text-uppercase px-3 px-lg-4 py-4 font-weight-bold small headings-font-family">Departements
+	</div>
+	<ul class="list-unstyled">
+		<li *ngFor="let departement of departements">
+			<!-- <a class='text-muted nav-link' href="#"><span>{{ departement.name_departements}}</span></a> -->
+			<!-- <a href="#{{departement.code_departements}}" *ngIf="isDropDownMenu" class='text-muted nav-link' -->
+			<a [routerLink]="['/departement',departement.code_departements]" *ngIf="isDropDownMenu" class='text-muted nav-link'
+				data-toggle='collapse' data-target='#{{departement.code_departements}}' [attr.aria-controls]='departement.code_departements'
+				attr.aria-label='Toggle {{departement.code_departements}}'
+				aria-expanded='false'><span>{{ departement.name_departements}}</span></a>
+			<div *ngIf="isDropDownMenu" class="collapse" [id]="departement.code_departements">
+				<ul class=" list-unstyled border-left border-primary border-thick">
+					<li *ngFor="let epci of departement.epci">
+						<a class='text-muted ml-5 nav-link' href=""><span>{{ epci.name }}</span></a>
+					</li>
+				</ul>
+			</div> 
+		</li>
+	</ul>
+</div>
