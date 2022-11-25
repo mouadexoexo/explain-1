@@ -12,6 +12,10 @@ accéder pour un élu spécifique, à ses mandats (passés et en cours) et ses p
 
 L’objectif de ce projet est de construire en partie une page permettant de visualiser les élus sur un territoire et de faire une recherche sur ces élus par nom prénom.
 
+### GitHub
+
+Pour récuperer le projet tapez la commande : 
+git clone https://github.com/mouadexoexo/explain-1.git
 
 ### Pré-requis
 
