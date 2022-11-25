@@ -53,4 +53,8 @@ Il faut ouvrir 2 terminal pour lancer le projet.
 
 [Terminal 2] : Entrer dans le dossier Front qui se trouve dans dossier explain-1 ensuite tapez la commande "npm start"  pour executer la partie Angular Front
 
+Une fois les deux programmes sont exécuté:
+Tapez dans l'URL : localhost:4200/search pour afficher les departements
+Clicker sur un departement pour afficher la liste EPCI qui appartient à departement
+Tapez dans l'URL : localhost:4200/departement/"code departement" pour afficher liste EPCI appartenant à un département
 
