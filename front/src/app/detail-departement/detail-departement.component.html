@@ -1,21 +1,20 @@
-<div id="sidebar" class="py-3">
-	<div class="text-gray-400 text-uppercase px-3 px-lg-4 py-4 font-weight-bold small headings-font-family">list Epci
-	</div>
-	<ul class="list-unstyled">
+<div id="left-menu">
+	<ul>
 		<li *ngFor="let epci of epcis">
 			<a class='text-muted nav-link' href="#"><span>{{ epci}}</span></a>
-<!-- 
-			<a (click)="onLogoutClick(departement.code_departements)" *ngIf="isDropDownMenu" class='text-muted nav-link'
-				data-toggle='collapse' data-target='#{{departement.code_departements}}' [attr.aria-controls]='departement.code_departements'
-				attr.aria-label='Toggle {{departement.code_departements}}'
-				aria-expanded='false'><span>{{ departement.name_departements}}</span></a>
-			<div *ngIf="isDropDownMenu" class="collapse" [id]="departement.code_departements">
-				<ul class=" list-unstyled border-left border-primary border-thick">
-					<li *ngFor="let epci of departement.epci">
-						<a class='text-muted ml-5 nav-link' href=""><span>{{ epci.name }}</span></a>
-					</li>
-				</ul>
-			</div>  -->
+
 		</li>
 	</ul>
 </div>
+<div class="main">
+	<h2>chercher des elus</h2>
+	<div class="card">
+	  <div class="input-wrap">
+		<img src="../assets/Group%201.png" width="18px" class="search">
+		<input type="search" [(ngModel)] = fullName placeholder="chercher un elusÒ">
+	  </div>
+	  <div *ngFor="let elus of listElus | FilterPipe: fullName" class="city" >
+		{{elus}}
+	  </div>
+	</div>
+  </div>

@@ -19,4 +19,8 @@ export class DepartementService {
   public listEpcibyDepartement(codeDep:any){
     return this.httpClient.get<DetailDepartement[]>(this.baseUrl+'FRDEPA'+codeDep)
   }
+
+  public listElus(){
+    return this.httpClient.get('assets/elus.json')
+  }
 }

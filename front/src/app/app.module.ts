@@ -6,12 +6,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { DepartementComponent } from './departement/departement.component';
 import { DetailDepartementComponent } from './detail-departement/detail-departement.component';
+import { FilterPipe } from './filter/filter.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
     DepartementComponent,
-    DetailDepartementComponent
+    DetailDepartementComponent,
+    FilterPipe
   ],
   imports: [
     BrowserModule,
